@@ -8,10 +8,11 @@ const port = process.env.PORT || 8080;
 
 
 app
-    .use(express.static('../../client'))
+    .use(express.static('public'))
     .use(morgan('dev'))
 
     .use(bodyParser.urlencoded({extended: false}))
     .use(bodyParser.json())
 
     .listen(port, () => console.log('Server Listening on port ' + port));
+
